@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import tkinter as tk
 from tkinter import messagebox, Menu
 import random
@@ -111,3 +112,25 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = Graphic(root)
     root.mainloop()
+=======
+import re
+
+def read_file(filename):
+    with open(filename,'r') as file:
+        return file.read()
+def process_text(text):
+    text=re.sub(r'[.,!?;:\'\"()\[\]{}]','',text);
+    text=re.sub(r'\s+', ' ',text).strip()
+    text=text.lower()
+    return text
+def main():
+    filename='input'
+    text=read_file(filename)
+
+    print("Textul initial: \n",text)
+    processd_text=process_text(text)
+    print("\nTextul procesat:\n",processd_text)
+
+if __name__=="__main__":
+    main()
+>>>>>>> 608442e (First commit)

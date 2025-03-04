@@ -1,0 +1,1 @@
+Acesta este un TEST! Programul trebuie să elimine: punctuația, spațiile duble, ȘI să transforme în LITERE MICI.

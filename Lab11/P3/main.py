@@ -58,11 +58,11 @@ class ThreadPool:
         self.terminate()
 
 if __name__ == '__main__':
-    def sum_of_squares_of_digits(x):
+    def sum_of_digits(x):
         return sum(int(digit) for digit in str(x))
 
 
     data = list(range(1, 20))
     with ThreadPool(5) as pool:
-        results = pool.map(sum_of_squares_of_digits, data)
+        results = pool.map(sum_of_digits, data)
     print(results)

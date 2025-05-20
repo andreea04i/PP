@@ -1,0 +1,2 @@
+Acesta este un exemplu de fișier care conține cuvinte pentru testare.
+Unele dintre ele sunt lungi, altele nu.

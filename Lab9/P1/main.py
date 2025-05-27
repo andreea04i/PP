@@ -3,7 +3,7 @@ import re
 import os
 from abc import ABC, abstractmethod
 
-
+//clasa abstracta pentru handleri de fisiere
 class FileHandler(ABC):
     def __init__(self):
         self._next = None
@@ -53,7 +53,7 @@ class JavaHandler(FileHandler):
                     return JavaCommand(filepath , class_name)
         return super().identify(content, filepath)
 
-
+//clasa abstracta pentru comenzi pentru diferitele tipuri de fisiere
 class Command(ABC):
     def __init__(self,filepath):
         self.filepath = filepath
@@ -98,7 +98,7 @@ class JavaCommand(Command):
             
             with open(self.filepath, 'r') as f:
                 content = f.read()
-
+            //pentru java am creat un fisier temporar cu extensia .java pentru a putea compila si rula comanda
             temp_filename = self.class_name + '.java'
 
             
@@ -137,7 +137,7 @@ def main():
     except Exception as e:
         print(f"Eroare la citirea fișierului: {e}")
         return
-
+    //se incepe lantul de handler-uri
     handler = KotlinHandler()
     handler.set_next(PythonHandler()) \
            .set_next(BashHandler()) \

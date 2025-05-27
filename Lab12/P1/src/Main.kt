@@ -12,5 +12,5 @@ fun operatiiLista() {
     println("1) Suma produselor: $suma")
 }
 fun main() {
-    operatiiLista()  // <- acest apel e obligatoriu
+    operatiiLista()  
 }
